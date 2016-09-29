@@ -1,12 +1,13 @@
 FROM google/cloud-sdk
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-		g++ \
-		gcc \
-		libc6-dev \
-		make \
-    git \
-    golang \
+	g++ \
+	gcc \
+	vim \
+	libc6-dev \
+	make \
+	git \
+	golang \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV PATH=${PATH}:/google-cloud-sdk/platform/google_appengine
